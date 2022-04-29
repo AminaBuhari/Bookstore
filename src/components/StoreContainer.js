@@ -1,0 +1,51 @@
+import React from 'react';
+import { Routes, Route} from 'react-router-dom';
+import Categories from './Categories';
+import BookList from './BookList';
+import AddBook from './AddBook';
+import Header from './Header';
+
+class Container extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: [
+        {
+          title: 'The hunger Games',
+          author: 'Suzanne Collins',
+          id: 1,
+        },
+        {
+          title: 'The Dune',
+          author: 'Frank Herbert',
+          id: 2,
+        },
+        {
+          title: 'Capital in the Twenty-First Century',
+          author: 'Suzanne Collins',
+          id: 3,
+
+        },
+      ],
+    };
+  }
+
+  delBooks = () => {
+    console.log('remove books');
+  };
+
+  render() {
+    const { books } = this.state;
+    return (
+      <div>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<BookList books={books} deleteBooksProps={this.delBooks} />} />
+          <Route path="categories" element={<Categories />} />
+        </Routes>
+      </div>
+    );
+  }
+}
+
+export default Container;
