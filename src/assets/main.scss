@@ -1,0 +1,29 @@
+:root {
+  --white: #fff;
+  --blue: #0290ff;
+  --black: #121212;
+  --pale-grey: #f5f6fa;
+}
+// ///////////////////////////// Global Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  width: 50rem;
+  height: 89.625rem;
+  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
+}
