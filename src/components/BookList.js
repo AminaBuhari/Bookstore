@@ -1,21 +1,32 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import PropTypes from 'prop-types';
 import AddBook from './AddBook';
 import BookItem from './BookItem';
 
-const e = this;
-const BookList = () => (
-  <div>
-    <ul>
-      {e.props.books.map((book) => (
-        <BookItem
-          key={book.id}
-          book={book}
-          deleteBooksProps={e.props.deleteBooksProps}
-        />
-      ))}
-    </ul>
-    <AddBook />
-  </div>
+class BookList extends React.Component {
+  render() {
+    const e = this.props;
+    return (
+      <div>
+        <ul>
+          {e.books.map((book) => (
+            <BookItem
+              key={book.id}
+              book={book}
+              deleteBooksProps={e.deleteBooksProps}
+            />
+          ))}
+        </ul>
+        <AddBook />
+      </div>
 
-);
+    );
+  }
+}
+
+BookList.propTypes = {
+  books: PropTypes.string.isRequired,
+  deleteBooksProps: PropTypes.func.isRequired,
+};
 export default BookList;

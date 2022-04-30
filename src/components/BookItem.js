@@ -1,15 +1,27 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const e = this;
-const BookItem = () => (
-  <div>
-    <li>{e.props.book.title}</li>
-    <li>{e.props.book.author}</li>
-    <button type="button" onClick={() => e.props.deleteBooksProps()}>
-      Remove
-    </button>
-  </div>
+class BookItem extends React.Component {
+  render() {
+    const e = this.props;
+    return (
+      <div>
+        <li>{e.book.title}</li>
+        <li>{e.book.author}</li>
+        <button type="button" onClick={() => e.deleteBooksProps}>Remove</button>
+      </div>
 
-);
+    );
+  }
+}
+
+BookItem.propTypes = {
+  book: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  deleteBooksProps: PropTypes.func.isRequired,
+
+};
 
 export default BookItem;
