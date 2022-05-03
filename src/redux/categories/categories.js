@@ -8,10 +8,8 @@ export function categories() {
 }
 
 export default function reducerCategory(state = initialState, action = {}) {
-  switch (action.type) {
-    case CATEGORIES:
-      return 'Under Construction';
-      // do reducer stuff
-    default: return state;
+  if (action.type === 'CATEGORIES') {
+    return 'Under Construction';
   }
+  return state;
 }
