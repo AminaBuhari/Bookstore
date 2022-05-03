@@ -17,13 +17,11 @@ class BookItem extends React.Component {
 }
 
 BookItem.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  book: PropTypes.element({
-    title: PropTypes.string,
-    author: PropTypes.string,
-  }),
-  // eslint-disable-next-line react/require-default-props
-  deleteBooksProps: PropTypes.func,
+  book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
+  deleteBooksProps: PropTypes.func.isRequired,
 
 };
 
