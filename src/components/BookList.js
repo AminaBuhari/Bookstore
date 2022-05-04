@@ -26,7 +26,7 @@ class BookList extends React.Component {
 }
 
 BookList.propTypes = {
-  books: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(toString).isRequired,
   deleteBooksProps: PropTypes.func.isRequired,
 };
 export default BookList;

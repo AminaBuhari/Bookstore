@@ -17,9 +17,10 @@ class BookItem extends React.Component {
 }
 
 BookItem.propTypes = {
-  book: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
   deleteBooksProps: PropTypes.func.isRequired,
 
 };

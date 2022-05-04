@@ -30,7 +30,6 @@ class Container extends React.Component {
   }
 
   delBooks = () => {
-    console.log('remove books');
   };
 
   render() {
