@@ -1,6 +1,7 @@
 const CATEGORIES = 'books/CATEGORIES';
 
 const initialState = [];
+
 export function categories() {
   return {
     type: CATEGORIES,
@@ -8,8 +9,8 @@ export function categories() {
 }
 
 export default function reducerCategory(state = initialState, action = {}) {
-  if (action.type === 'CATEGORIES') {
-    return 'Under Construction';
+  if (action.type === CATEGORIES) {
+    return [...state, 'Under Construction'];
   }
   return state;
 }
