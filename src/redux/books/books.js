@@ -3,7 +3,6 @@ import { getData, deleteBooks, postBooks } from '../api';
 
 const ADDBOOK = 'books/ADDBOOK';
 const REMOVEBOOK = 'books/REMOVEBOOKS';
-const DELETEDBOOKS = 'books/DELETED_BOOKS';
 const RETURNBOOKS = 'books/RETURNBOOKS';
 
 const initialState = [];
@@ -26,8 +25,7 @@ function reducerBook(state = initialState, action = {}) {
 }
 
 // Action Creator
-export function addbook(id,title, author) {
-  
+export function addbook(id, title, author) {
   const book = {
     id,
     title,
@@ -42,9 +40,9 @@ export function addbook(id,title, author) {
 
 export const pushBookManually = (title, author) => async (dispatch) => {
   const id = uuidv4();
-  await postBooks(id,title, author)
-  dispatch(addbook(id, title, author))
-}
+  await postBooks(id, title, author);
+  dispatch(addbook(id, title, author));
+};
 
 export const addedBooks = (books) => {
   const formatBooks = Object.entries(books).map(([key, value]) => ({ ...value[0], id: key }));

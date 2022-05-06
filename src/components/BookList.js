@@ -6,10 +6,10 @@ import BookItem from './BookItem';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   useEffect(() => {
-  dispatch(getBooks())
-  }, [dispatch]) 
+    dispatch(getBooks());
+  }, [dispatch]);
   return (
     <div>
       <ul>
