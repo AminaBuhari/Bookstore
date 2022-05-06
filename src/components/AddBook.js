@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addbook } from '../redux/books/books';
+import { pushBookManually } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const AddBook = () => {
     const { target } = e;
     const title = target.title.value;
     const author = target.author.value;
-    dispatch(addbook(title, author));
+    dispatch(pushBookManually(title, author));
     target.title.value = '';
     target.author.value = '';
   };

@@ -1,26 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
+import { getData, deleteBooks, postBooks } from '../api';
 
 const ADDBOOK = 'books/ADDBOOK';
 const REMOVEBOOK = 'books/REMOVEBOOKS';
+const DELETEDBOOKS = 'books/DELETED_BOOKS';
+const RETURNBOOKS = 'books/RETURNBOOKS';
 
-const initialState = [
-  {
-    title: 'The hunger Games',
-    author: 'Suzanne Collins',
-    id: 1,
-  },
-  {
-    title: 'The Dune',
-    author: 'Frank Herbert',
-    id: 2,
-  },
-  {
-    title: 'Capital in the Twenty-First Century',
-    author: 'Suzanne Collins',
-    id: 3,
-
-  },
-];
+const initialState = [];
 
 // Reducer
 function reducerBook(state = initialState, action = {}) {
@@ -31,18 +17,21 @@ function reducerBook(state = initialState, action = {}) {
       ];
     case REMOVEBOOK:
       return [...state.filter((book) => book.id !== action.id)];
+
+    case RETURNBOOKS:
+      return [...action.books];
     // do reducer stuff
     default: return state;
   }
 }
 
 // Action Creator
-export function addbook(title, author) {
-  const id = uuidv4();
+export function addbook(id,title, author) {
+  
   const book = {
+    id,
     title,
     author,
-    id,
   };
 
   return {
@@ -51,11 +40,33 @@ export function addbook(title, author) {
   };
 }
 
-export function removebook(id) {
-  return {
-    type: REMOVEBOOK,
-    id,
-  };
+export const pushBookManually = (title, author) => async (dispatch) => {
+  const id = uuidv4();
+  await postBooks(id,title, author)
+  dispatch(addbook(id, title, author))
 }
+
+export const addedBooks = (books) => {
+  const formatBooks = Object.entries(books).map(([key, value]) => ({ ...value[0], id: key }));
+  return {
+    type: RETURNBOOKS,
+    books: formatBooks,
+  };
+};
+
+export const getBooks = () => async (dispatch) => {
+  const response = await getData();
+  dispatch(addedBooks(response));
+};
+
+export const deletedBooksComplete = (id) => ({
+  type: REMOVEBOOK,
+  id,
+});
+
+export const deletedBooks = (id) => async (dispatch) => {
+  await deleteBooks(id);
+  dispatch(deletedBooksComplete(id));
+};
 
 export default reducerBook;
