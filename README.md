@@ -15,10 +15,10 @@ To get a local copy up and running follow this simple step:
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://aminabookstore.herokuapp.com/)
 
 # Screenshot
-[Bookstore]()
+![work](https://user-images.githubusercontent.com/66526480/167256340-9926c8eb-666e-4fac-a24f-b4ca67a618cb.PNG)
 
 # Author
 
@@ -32,7 +32,7 @@ To get a local copy up and running follow this simple step:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/AminaBuhari/Bookstore/issues).
 
 ## Show your support
 
