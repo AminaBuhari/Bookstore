@@ -1,0 +1,56 @@
+
+#svgicon {
+  display: flex;
+  gap: 30px;
+
+  #app {
+    margin-top: 40px;
+  }
+
+  #progressInput {
+    margin: 20px auto;
+    width: 10%;
+  }
+
+  .circle-background,
+  .circle-progress {
+    fill: none;
+  }
+
+  .circle-background {
+    stroke: #ddd;
+  }
+
+  .circle-progress {
+    stroke: var(--blue);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .circle-text {
+    font-size: 3em;
+    font-weight: bold;
+    fill: red;
+  }
+
+  svg {
+    width: 20%;
+  }
+
+  #progress {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    .percentage {
+      font-size: 2rem;
+      font-weight: 500;
+      font-family: Monteserrat-Regular, sans-serif;
+    }
+
+    .completed {
+      font-size: 1rem;
+      color: var(--grey);
+    }
+  }
+}

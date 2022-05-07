@@ -1,0 +1,30 @@
+#chapterblock {
+  display: flex;
+  flex-direction: column;
+  padding-right: 60px;
+  align-self: center;
+  padding-left: 60px;
+  border-left: 1px solid lightgray;
+
+  .chapter {
+    font-size: 0.8rem;
+    color: grey;
+    font-family: RobotoSlab-Light, sans-serif;
+    padding-bottom: 10px;
+  }
+
+  .lesson {
+    font-size: 1rem;
+    font-family: RonotoSlab-Light, sans-serif;
+    padding-bottom: 25px;
+  }
+
+  #update {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border-style: none;
+  }
+}

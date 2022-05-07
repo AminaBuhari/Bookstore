@@ -1,0 +1,43 @@
+#Addbook {
+  margin: 2rem 6.8rem;
+
+  h2 {
+    font-family: Monteserrat-Bold, sans-serif;
+    color: var(--grey);
+    font-size: 1rem;
+    padding-bottom: 20px;
+    border-top: 2px solid var(--pale-grey);
+    padding-top: 20px;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 2.2rem;
+
+    #titleinput {
+      width: 42rem;
+      border: 1px solid var(--pale-grey);
+      color: var(--grey);
+      padding-left: 5px;
+    }
+
+    #authorinput {
+      width: 17.813rem;
+      border: 1px solid var(--pale-grey);
+      color: var(--grey);
+      padding-left: 5px;
+    }
+
+    #submit {
+      width: 11.5rem;
+      background-color: var(--blue);
+      color: var(--white);
+      border-radius: 5px;
+      border-style: none;
+      font-size: 0.6rem;
+      font-weight: 500;
+    }
+  }
+}
