@@ -14,7 +14,7 @@ const BookItem = (props) => {
         <p className="action">Action</p>
         <li className="booktitle">{book.title}</li>
         <li className="author">{book.author}</li>
-        <div id ="feedback">
+        <div id="feedback">
           <p>Comments</p>
           <button id="remove" type="button" onClick={() => { dispatch(deletedBooks(book.id)); }}>Remove</button>
           <p>Edit</p>

@@ -4,7 +4,7 @@
   --black: #121212;
   --pale-grey: #f5f6fa;
   --grey: #888;
-  --dark-grey: darkgray; 
+  --dark-grey: darkgray;
   --cool-blue: #4386bf;
 }
 // ///////////////////////////// Global Reset
@@ -27,13 +27,13 @@ html {
 body {
   width: 50rem;
   height: 50rem;
-  background-color: var(--pale-grey) ;
+  background-color: var(--pale-grey);
 }
-ul {
-   padding: 0;
-   margin: 0;
-   list-style: none;
-   text-decoration: none;
-   align-self: center;
- }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  align-self: center;
+}

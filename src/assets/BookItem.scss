@@ -1,57 +1,51 @@
 
+.bookcard {
+  display: flex;
+  border: 2px solid var(--pale-grey);
+  justify-content: space-between;
+  padding: 0 20px 0 10px;
+  margin: 2rem 6.8rem;
 
-.bookcard{
-    display: flex;
-    border: 2px solid var(--pale-grey);
-    justify-content: space-between;
-    padding: 0 20px 0 10px;
-   margin: 2rem 6.8rem;
-   
-    
-    .cardwrap {
-        align-self: center;
-        padding: 0 150px 0 20px;
-        .action {
-            color: var(--grey);
-            font-size: 1rem;
-            font-weight: 500;
+  .cardwrap {
+    align-self: center;
+    padding: 0 150px 0 20px;
 
-            font-family: Monteserat-regular, sans-serif;
-        }
-        .booktitle{
-            color: black;
-            font-size: 1.8rem;
-            font-weight: 700;
-            padding: 5px 0;
-            font-family: RobotoSlab-Bold,sans-serif;
-        }
-        .author {
-            color: var(--cool-blue);
-            font-family: RobotoSlab-Light, sans-serif;
-            size: 1rem;
-        }
-    
-        #feedback {
-            display: flex;
-            gap: 15px;
-            padding-top: 20px;
-            color: var(--cool-blue);
-    
-            #remove {
-                border-bottom: 0;
-                border-top: 0;
-                padding: 0 10px;
-                color: var(--cool-blue);
-                background-color: transparent;
-                border-right: 2px solid var(--grey);
-                border-left: 2px solid var(--grey)
-                
-    
-            }
-        }
-
-       
-
+    .action {
+      color: var(--grey);
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: Monteserat-regular, sans-serif;
     }
-    
+
+    .booktitle {
+      color: black;
+      font-size: 1.8rem;
+      font-weight: 700;
+      padding: 5px 0;
+      font-family: RobotoSlab-Bold, sans-serif;
+    }
+
+    .author {
+      color: var(--cool-blue);
+      font-family: RobotoSlab-Light, sans-serif;
+      font-size: 1rem;
+    }
+
+    #feedback {
+      display: flex;
+      gap: 15px;
+      padding-top: 20px;
+      color: var(--cool-blue);
+
+      #remove {
+        border-bottom: 0;
+        border-top: 0;
+        padding: 0 10px;
+        color: var(--cool-blue);
+        background-color: transparent;
+        border-right: 2px solid var(--grey);
+        border-left: 2px solid var(--grey);
+      }
+    }
+  }
 }

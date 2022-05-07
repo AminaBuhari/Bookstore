@@ -11,7 +11,7 @@ const Header = () => (
         <li className="link"><Link id="anchorb" to="/categories">CATEGORIES</Link></li>
       </ul>
     </div>
-    <div id = "icon">
+    <div id="icon">
       <button type="button" className="user" label="user"><ImUser /></button>
     </div>
   </nav>
