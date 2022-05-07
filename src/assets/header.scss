@@ -1,0 +1,61 @@
+.navwrap{
+    background-color: var(--white);
+    height: 5rem;
+    border: 2px solid var(--pale-grey);
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat-Regular, Arial, Helvetica, sans-serif;
+    padding: 0 100px;
+    margin-bottom: 2rem;
+
+
+    .book {
+        color: var(--blue);
+        font-size: 2em;
+        align-self: center;
+    }
+
+    .title{
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+
+     #anchora {
+         text-decoration: none;
+         color: var(--black);
+         line-height: 1.9;
+         font-size: 0.813rem;
+         
+        }
+     #anchorb {
+        text-decoration: none;
+        color: var(--grey);
+        line-height: 1.9;
+         font-size: 0.813rem;
+      }
+    }
+
+    #icon {
+        align-self: center;
+        .user {
+            display: flex;
+            align-items: center;
+            appearance: none;
+            border: solid 1px var(--pale-grey);
+            border-radius: 50%;
+            background: none;
+            padding: 0.875rem;
+            justify-self:  center;
+            
+          }
+          
+          & svg {
+            width: 1.063rem;
+            height: 1.063rem;
+            color: var(--blue);
+    
+            
+          }
+    }
+   
+}

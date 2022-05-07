@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getBooks } from '../redux/books/books';
-import AddBook from './AddBook';
 import BookItem from './BookItem';
 
 const BookList = () => {
@@ -11,6 +10,7 @@ const BookList = () => {
     dispatch(getBooks());
   }, [dispatch]);
   return (
+
     <div>
       <ul>
         {books.map((book) => (
@@ -20,7 +20,6 @@ const BookList = () => {
           />
         ))}
       </ul>
-      <AddBook />
     </div>
 
   );

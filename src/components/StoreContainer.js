@@ -1,6 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import CircularProgressBar from './CircularComponent';
 import Categories from './Categories';
+import AddBook from './AddBook';
 import BookList from './BookList';
 import Header from './Header';
 
@@ -29,18 +31,21 @@ class Container extends React.Component {
     };
   }
 
+
   delBooks = () => {
   };
 
   render() {
     const { books } = this.state;
     return (
-      <div>
+      <div className='Wrapper'>
         <Header />
         <Routes>
           <Route exact path="/" element={<BookList books={books} deleteBooksProps={this.delBooks} />} />
           <Route path="categories" element={<Categories />} />
         </Routes>
+        <AddBook />
+
       </div>
     );
   }

@@ -16,12 +16,12 @@ const AddBook = () => {
   };
 
   return (
-    <div>
+    <div id= "Addbook">
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Book title" name="title" />
-        <input type="text" placeholder="Author" name="author" />
-        <button type="submit">ADD BOOK</button>
+        <input id = "titleinput" type="text" placeholder="Book title" name="title" />
+        <input id = "authorinput" type="text" placeholder="Author" name="author" />
+        <button id = "submit" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
